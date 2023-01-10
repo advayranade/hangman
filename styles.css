@@ -1,0 +1,10 @@
+.blanks {
+    text-decoration: underline;
+    font-size: 50px;
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+body {
+    font-family: sans-serif;
+}

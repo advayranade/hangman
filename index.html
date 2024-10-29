@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hangman</title>
-    <link rel="stylesheet" href="/styles.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="/hangman/styles.css" />
+  </head>
+  <body>
     <div id="app">
-        <h1>Welcome to Hangman!</h1> 
-        <label for="word">Enter initial word here:</label>
-        <input type="password" id="word" name="word" placeholder="Enter initial word" v-model="word" v-on:keypress="enterWordInput"/>
-        <button type="submit" v-on:click="wordInput">Submit</button>
-        <br>
-        <br>
-        <br>
-        <div id="blanks"></div>
-        <br>
-        <br>
-        <br>
-        <div id="guess_div" v-show="guess_ready">
-            <label for="guess">Ready to guess?</label>
-            <input type="text" id="guess" name="guess" placeholder="Enter guess here" v-model="guess" v-on:keypress="enterGuessInput"/>
-            <button type="submit" v-on:click="guessInput">Guess!</button>
-        </div>
+      <h1>Welcome to Hangman!</h1>
+      <label for="word">Enter initial word here:</label>
+      <input
+        type="password"
+        id="word"
+        name="word"
+        placeholder="Enter initial word"
+        v-model="word"
+        v-on:keypress="enterWordInput"
+      />
+      <button type="submit" v-on:click="wordInput">Submit</button>
+      <br />
+      <br />
+      <br />
+      <div id="blanks"></div>
+      <br />
+      <br />
+      <br />
+      <div id="guess_div" v-show="guess_ready">
+        <label for="guess">Ready to guess?</label>
+        <input
+          type="text"
+          id="guess"
+          name="guess"
+          placeholder="Enter guess here"
+          v-model="guess"
+          v-on:keypress="enterGuessInput"
+        />
+        <button type="submit" v-on:click="guessInput">Guess!</button>
+      </div>
     </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-</body>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"
+    ></script>
+    <script type="text/javascript" src="/hangman/app.js"></script>
+  </body>
 </html>
